@@ -1,0 +1,122 @@
+
+
+
+.note--cotainer{
+    position: relative;
+    height: 100vh;
+    margin-right: 20px;
+}
+
+section{
+    background-color: #000;
+    color:white;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 10px;    
+    margin-right: 20px;
+    position: relative;
+}
+
+.notes--header{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    /* padding:8p; */
+    position: sticky;
+    top:0;
+    z-index: 100;
+    width: 100vw;
+    height: 125px;
+}
+
+.notes--heading{
+    margin-right: 12px;
+    font-size: 36px;
+    margin-left: -14px;
+    padding: 20px 0;
+}
+
+.notes--input{
+    margin-right: 26px;
+    margin-top: 10px;
+    padding:18px 15px;
+    font-size: 20px;
+    width: 700px;
+    border-radius: 8px;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #242424;
+    margin-left: -10px;
+    
+}
+
+.btn{
+    font-size: 50px;
+    background-color: #242424;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.btn:hover{
+    
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-plus{
+    font-size: 60px;
+    background-color: #242424;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 30px;
+    left: 100%;
+    padding: 8px;
+    margin-right: 40px;
+}
+.btn-plus:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* Media Queries */
+@media (max-width:820px){
+.note--cotainer{
+        position: relative;
+    } 
+    section{
+        width: 80vw;
+    }
+    .notes--header{
+        width: 90vw;
+ 
+    }
+    .notes--heading{
+        margin-right: 16px;
+        font-size: 22px;
+    }
+    .notes--input{
+        margin-right: 16px;
+        padding: 10px;
+        width: 250px;
+        border-radius: 3px;
+    }
+    
+    .btn{
+        font-size: 30px;
+        padding: 5px;
+    }
+
+}
