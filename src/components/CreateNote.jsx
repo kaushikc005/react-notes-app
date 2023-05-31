@@ -5,24 +5,21 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import './CreateNote.css'
 import { useNoteDate } from './hooks/useNoteDate';
+import { addDoc,Timestamp } from 'firebase/firestore';
 
-const CreateNote = ({notes,setNotes}) => {
+const CreateNote = ({notes,setNotes,notesCollectionRef}) => {
     const [title, setTitle] = useState('')
     const [details, setDetails] = useState('');
-    const date=useNoteDate()
+   //  const date=useNoteDate()
     const navigate=useNavigate();
-    console.log(date)
-    const handleSubmit=()=> {
-
+   
+    const handleSubmit=async ()=> {
+    
         if(title && details)
         {
-          const id=uuid();
-          
-          const newNote={id,title,details,date};
-          const newNotes=[newNote,...notes];
-          setNotes(newNotes);
-
-          
+          const newNote={title,details,dateCreated:Timestamp.fromDate(new Date()),
+            dateModified:Timestamp.fromDate(new Date())};
+          await addDoc(notesCollectionRef,newNote)
         }
     }
   return (

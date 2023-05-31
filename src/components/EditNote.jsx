@@ -4,6 +4,8 @@ import {RiDeleteBin6Line} from 'react-icons/Ri';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import './EditNote.css'
 import { useNoteDate } from './hooks/useNoteDate';
+import { deleteDoc, doc,setDoc,Timestamp } from 'firebase/firestore';
+import { db } from './utils/firebase';
 
 const EditNote = ({notes,setNotes}) => {
     const {id}=useParams(); 
@@ -11,30 +13,29 @@ const EditNote = ({notes,setNotes}) => {
     console.log(note);
     const [title, setTitle] = useState(note.title)
     const [details, setDetails] = useState(note.details);
-    const date=useNoteDate()
-    const navigate=useNavigate();
-    const handleSubmit=(event)=> {
-        // event.preventDefault();
+    
+    const handleSubmit=async()=> {
+
         if(title && details)
         {        
-          const newNote={id,title,details};
-          const newNotes=notes.filter((item) => item.id!=id)
-          setNotes([newNote,...newNotes]);
+          const newNote={title,details,dateModified:Timestamp.fromDate(new Date())};
+          const docRef=doc(db,"notes",id)
+          await setDoc(docRef,newNote,{merge:true})
         }
-        // navigate('/');
+
     }
 
-    const handleDelete=()=> {
-
+    const handleDelete=async()=> {
+      
+      console.log(id)
       if(title && details)
       {     
-        const newNote={id,title,details,date};
-        const newNotes=notes.filter((item) => item.id != id);
-        setNotes([...newNotes]);
+        const docRef=doc(db,"notes",id)
+        await deleteDoc(docRef)
       }
       }
   return (
-    <section>
+    <section className='editNote--container'>
     <header>
        <Link to='/'>
           <MdArrowBackIosNew className='edit--note-btn'/>
