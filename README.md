@@ -2,8 +2,7 @@
 
 
  This project was bootstrapped with [Create Vite](https://vitejs.dev/guide/).
- 
- ##Live: https://notes-webapp1.netlify.app/
+## Live Project: https://notes-webapp1.netlify.app/
 # Notes App
 This is a notes app made using Reactjs and Firebase.
 
