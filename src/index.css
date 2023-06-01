@@ -38,5 +38,14 @@ main{
     left: 50%;
     transform: translateX(-50%);
   }
+  main{
+    background-color: #000;
+     color:white;
+     height: 100vh;
+     width: unset;
+     margin-bottom: 10px;    
+     overflow-x: hidden;
+     padding: 0 1rem;
+ }
   
 }

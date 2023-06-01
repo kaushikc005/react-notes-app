@@ -1,110 +1,102 @@
-.card--container{
-    width: 100% !important;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 10px;
-    gap:15px; 
-    position: relative;
-    margin-bottom: 20px;
-    margin: 0 !important;
-    margin-left: -12px;
-    position: relative;
-    overflow-x: hidden;
+.card--container {
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  margin: 0 !important;
+  margin-left: -12px;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.card--link{
-   display: flex;
-   justify-content: center;
-   max-width: 100%;
-   height: 100%;
-  
+.card--link {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
 }
 
-.card{
-    margin-block:10px;
-    width: 150px;
-    padding:10px;
-    padding-bottom: 24px;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 3px;
-        
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    opacity: 0.9;
-    position: relative;
-    height: 20vh;
-
+.card {
+  margin-block: 10px;
+  width: 150px;
+  padding: 10px;
+  padding-bottom: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  opacity: 0.9;
+  position: relative;
 }
 
-
-.card--container .btn{
-    font-size: 40px;
-    background-color: #242424;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 20px;
-    position: sticky;
-    bottom: 20px;
-    right: 0px;
-    cursor: pointer;
-    
+.card:hover{
+    opacity: 1;
 }
 
-.card--title-display{
-    font-size: 20px;
-    padding-bottom: 20px;
-    font-weight: bold;
-    
+.card--container .btn {
+  font-size: 40px;
+  background-color: #242424;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 20px;
+  position: sticky;
+  bottom: 20px;
+  right: 0px;
+  cursor: pointer;
 }
 
-.card--details-display{
-    font-size: 16px;
-    font-weight: 600;
-    white-space: pre-line;
+.card--title-display {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
 }
 
-.card--date-display{
-    font-size: 10px;
-    font-weight: 600;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0.5rem;
-}
-.empty--notes{
-   font-size: 60px;
-   padding: 30px;
-   position: fixed;
-   top: 36vh;
-   left: 50%;
-   text-align: center;
-   transform: translateX(-50%);
+.card--details-display {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: pre-line;
+  padding-bottom: 1rem;
 }
 
-
+.card--date-display {
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.empty--notes {
+  font-size: 60px;
+  padding: 30px;
+  position: fixed;
+  top: 36vh;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
 
 /* Media Queries */
-@media (max-width:819px){
-    .card--container{
-        width: 90vw;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-left: 0;
-        margin-right: 5vw;
-    }
-    
-    .card:hover{
-        opacity: 1;
-    }
-    
-    .empty--notes{
-        font-size: 30px;
-        position: fixed;
-        top: 40vh !important;
-        
-    }
-    
-    
+@media (max-width: 819px) {
+  .card--container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0px !important;
+    gap: 10px;
+    margin-left: 0;
+    margin-right: 5vw;
+  }
+
+  .card:hover {
+    opacity: 1;
+  }
+
+  .empty--notes {
+    font-size: 30px;
+    position: fixed;
+    top: 40vh !important;
+  }
 }
