@@ -1,6 +1,4 @@
 
-
-
 .note--cotainer{
     position: relative;
     height: 100vh;
@@ -97,11 +95,12 @@ section{
         position: relative;
     } 
     section{
-        width: 80vw;
+        width: 90vw;
+        /* overflow-x: hidden; */
     }
     .notes--header{
-        width: 90vw;
- 
+       width: 90vw;
+        margin-left: 1.2rem;
     }
     .notes--heading{
         margin-right: 16px;
@@ -117,6 +116,10 @@ section{
     .btn{
         font-size: 30px;
         padding: 5px;
+    }
+    .btn-plus{
+        left: 200vw;
+        margin-right: -2rem;
     }
 
 }

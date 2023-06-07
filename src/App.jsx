@@ -8,7 +8,7 @@ import { useNoteDate } from './components/hooks/useNoteDate'
 function App() {
   const [count, setCount] = useState(0)
   const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || [])
-
+  
   useEffect(()=>{
    localStorage.setItem('notes',JSON.stringify(notes));
   },[notes])
