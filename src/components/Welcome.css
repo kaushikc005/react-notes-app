@@ -1,0 +1,59 @@
+.welcome--container {
+  height: 100%;
+  width: 100vw;
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+}
+
+.welcome--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.welcome--heading {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.welcome--subHeading {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+.notesIcon {
+  font-size: 100px;
+  color: rgb(175, 238, 108);
+}
+.signInBtn {
+  border: 1px solid #fff;
+  border-radius: 50px;
+}
+
+@media (max-width: 819px) {
+  .welcome--container {
+    padding: 0;
+    align-items: flex-start;
+    padding-top: 10vh;
+  }
+  .welcome--header {
+    margin: 0;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+
+  .welcome--heading {
+    font-size: 50px;
+  }
+
+  .welcome--subHeading {
+    font-size: 30px;
+  }
+}

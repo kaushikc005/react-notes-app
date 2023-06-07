@@ -1,4 +1,5 @@
 .card--container {
+<<<<<<< HEAD
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,6 +10,18 @@
   margin-bottom: 20px;
   padding: 20px;
   margin-left: -12px;
+=======
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  margin: 0 !important;
+  margin-left: -12px;
+  position: relative;
+  overflow-x: hidden;
+>>>>>>> 067f15abdd789b21801fd9cfd25f07903d542b1c
 }
 
 .card--link {
@@ -19,7 +32,10 @@
 }
 
 .card {
+<<<<<<< HEAD
   color: #fff;
+=======
+>>>>>>> 067f15abdd789b21801fd9cfd25f07903d542b1c
   margin-block: 10px;
   width: 150px;
   padding: 10px;
@@ -27,7 +43,10 @@
   overflow: hidden;
   cursor: pointer;
   border-radius: 3px;
+<<<<<<< HEAD
   height: 100%;
+=======
+>>>>>>> 067f15abdd789b21801fd9cfd25f07903d542b1c
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -35,6 +54,7 @@
   position: relative;
 }
 
+<<<<<<< HEAD
 .card--container .btn {
   font-size: 40px;
   background-color: #242424;
@@ -81,6 +101,60 @@
   .card--container {
     width: 90vw;
     grid-template-columns: repeat(2, 1fr);
+=======
+.card:hover{
+    opacity: 1;
+}
+
+.card--container .btn {
+  font-size: 40px;
+  background-color: #242424;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 20px;
+  position: sticky;
+  bottom: 20px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.card--title-display {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.card--details-display {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: pre-line;
+  padding-bottom: 1rem;
+}
+
+.card--date-display {
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.empty--notes {
+  font-size: 60px;
+  padding: 30px;
+  position: fixed;
+  top: 36vh;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+/* Media Queries */
+@media (max-width: 819px) {
+  .card--container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0px !important;
+>>>>>>> 067f15abdd789b21801fd9cfd25f07903d542b1c
     gap: 10px;
     margin-left: 0;
     margin-right: 5vw;
@@ -93,7 +167,11 @@
   .empty--notes {
     font-size: 30px;
     position: fixed;
+<<<<<<< HEAD
     top: 50%;
     transform: translateY(-100%);
+=======
+    top: 40vh !important;
+>>>>>>> 067f15abdd789b21801fd9cfd25f07903d542b1c
   }
 }
